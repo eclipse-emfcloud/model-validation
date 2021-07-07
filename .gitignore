@@ -1,0 +1,4 @@
+*/.settings/*
+.vscode/settings.json
+*/target/*
+target/

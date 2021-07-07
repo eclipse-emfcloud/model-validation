@@ -1,0 +1,6 @@
+<site>
+	<bundle id="org.eclipse.emfcloud.validation.framework">
+		<category name="org.eclipse.emfcloud.validation"/>
+	</bundle>
+	<category-def name="org.eclipse.emfcloud.validation" label="Model Validation"/>
+</site>

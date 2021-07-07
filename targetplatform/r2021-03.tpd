@@ -1,0 +1,23 @@
+target "2021-03 Release" with source,requirements
+location "http://download.eclipse.org/releases/2021-03/" {
+	org.eclipse.equinox.p2.discovery.feature.feature.group
+	org.eclipse.equinox.executable.feature.group
+	org.eclipse.emf.sdk.feature.group
+}
+
+location "http://ghillairet.github.io/p2" {
+	org.emfjson.jackson lazy
+}
+
+location "https://download.eclipse.org/emfcloud/modelserver/p2/nightly/0.7/0.7.0.202105141035/" {
+	org.eclipse.emfcloud.modelserver.feature.feature.group lazy
+}
+
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20210223232630/repository/" {
+	org.mockito lazy
+	org.junit lazy
+}
+
+location "https://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.36.v20210114/" {
+	org.eclipse.jetty.websocket.server lazy
+}

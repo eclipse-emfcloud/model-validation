@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="2021-03 Release" sequenceNumber="1620988974">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="1.2.800.v20200916-1234"/>
+      <unit id="org.eclipse.equinox.executable.feature.group" version="3.8.1100.v20210209-1541"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.25.0.v20210114-1734"/>
+      <repository location="http://download.eclipse.org/releases/2021-03/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.emfjson.jackson" version="0.0.0"/>
+      <repository location="http://ghillairet.github.io/p2"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emfcloud.modelserver.feature.feature.group" version="0.0.0"/>
+      <repository location="https://download.eclipse.org/emfcloud/modelserver/p2/nightly/0.7/0.7.0.202105141035/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.mockito" version="0.0.0"/>
+      <unit id="org.junit" version="0.0.0"/>
+      <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20210223232630/repository/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.jetty.websocket.server" version="0.0.0"/>
+      <repository location="https://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.36.v20210114/"/>
+    </location>
+  </locations>
+</target>
