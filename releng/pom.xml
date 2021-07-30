@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<name> Model Validation P2 Releng</name>
-	<artifactId>org.eclipse.emfcloud.validation.releng</artifactId>
+	<artifactId>releng</artifactId>
 	<packaging>pom</packaging>
 	<description>This plug-in contains the different modules relatives to the releng of Model Validation P2 Update Site.</description>
 
@@ -25,7 +25,7 @@
 			</activation>
 
 			<modules>
-				<module>org.eclipse.emfcloud.validation.repository</module>
+				<module>org.eclipse.emfcloud.validation.releng.repository</module>
 			</modules>
 			<build>
 				<pluginManagement>
@@ -33,40 +33,16 @@
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-p2-repository-plugin</artifactId>
-							<version>${tycho-version}</version>
+							<version>2.3.0</version>
 						</plugin>
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-p2-plugin</artifactId>
-							<version>${tycho-version}</version>
-						</plugin>
-						<plugin>
-							<groupId>org.eclipse.tycho.extras</groupId>
-							<artifactId>tycho-source-feature-plugin</artifactId>
-							<version>${tychoExtrasVersion}</version>
+							<version>2.3.0</version>
 						</plugin>
 					</plugins>
 				</pluginManagement>
 				<plugins>
-					<plugin>
-						<groupId>org.eclipse.tycho.extras</groupId>
-						<artifactId>tycho-source-feature-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>source-feature</id>
-								<phase>package</phase>
-								<goals>
-									<goal>source-feature</goal>
-								</goals>
-								<configuration>
-									<excludes>
-										<plugin id="org.apache.batik.pdf" />
-										<plugin id="org.eclipse.wst.common.project.facet.core" />
-									</excludes>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
 						<artifactId>tycho-p2-plugin</artifactId>
