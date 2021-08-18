@@ -1,4 +1,6 @@
 # Model Validation
+For more information, please visit the [EMF.cloud Website](https://www.eclipse.org/emfcloud/). If you have questions, contact us on our [discussions page](https://github.com/eclipse-emfcloud/emfcloud/discussions) and have a look at our [communication and support options](https://www.eclipse.org/emfcloud/contact/).
+
 This frameworks eases the usage of the modelserver validation capabilities.
 
 This model validation framework supports:
