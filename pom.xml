@@ -167,7 +167,7 @@
 								<artifact>
 									<groupId>org.eclipse.emfcloud.validation</groupId>
 									<artifactId>targetplatform</artifactId>
-									<classifier>r2021-03</classifier>
+									<classifier>r2021-09</classifier>
 									<version>${project.version}</version>
 								</artifact>
 							</target>

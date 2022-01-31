@@ -30,7 +30,7 @@ import org.eclipse.emfcloud.modelserver.client.ModelServerClient;
 import org.eclipse.emfcloud.modelserver.client.ModelServerClientApi;
 import org.eclipse.emfcloud.modelserver.emf.common.EMFFacetConstraints;
 import org.eclipse.emfcloud.modelserver.emf.common.ValidationMapperModule;
-import org.emfjson.jackson.module.EMFModule;
+import org.eclipse.emfcloud.jackson.module.EMFModule;
 
 public class ValidationFramework {
 

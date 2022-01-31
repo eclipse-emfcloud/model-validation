@@ -24,6 +24,7 @@ import java.util.concurrent.ExecutionException;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -35,7 +36,7 @@ import org.eclipse.emfcloud.modelserver.client.Response;
 import org.eclipse.emfcloud.modelserver.emf.common.EMFFacetConstraints;
 import org.eclipse.emfcloud.modelserver.emf.common.JsonResponse;
 import org.eclipse.emfcloud.modelserver.emf.common.ValidationMapperModule;
-import org.emfjson.jackson.module.EMFModule;
+import org.eclipse.emfcloud.jackson.module.EMFModule;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -51,7 +52,7 @@ public class ValidationFrameworkTest {
 
 	ValidationFramework framework;
 
-	ModelServerClientApi mockAPI;
+	ModelServerClientApi<EObject> mockAPI;
 
 	@Before
 	public void setup() {
@@ -121,7 +122,7 @@ public class ValidationFrameworkTest {
 	private CompletableFuture<Response<String>> mockConstraintList() {
 		ObjectMapper mapper = EMFModule.setupDefaultMapper();
 		Map<String, Map<String, EMFFacetConstraints>> constraintMap = new HashMap<>();
-		Map<String, Object> mockFacets = new HashMap();
+		Map<String, Object> mockFacets = new HashMap<String, Object>();
 		mockFacets.put(EMFFacetConstraints.WHITESPACE, 2);
 		mockFacets.put(EMFFacetConstraints.ENUMERATION, List.of());
 		mockFacets.put(EMFFacetConstraints.PATTERN, List.of());
