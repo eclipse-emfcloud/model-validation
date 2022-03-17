@@ -30,13 +30,13 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-import org.eclipse.emfcloud.modelserver.client.ModelServerClientApi;
+import org.eclipse.emfcloud.jackson.module.EMFModule;
+import org.eclipse.emfcloud.modelserver.client.ModelServerClientApiV1;
 import org.eclipse.emfcloud.modelserver.client.ModelServerNotification;
 import org.eclipse.emfcloud.modelserver.client.Response;
 import org.eclipse.emfcloud.modelserver.emf.common.EMFFacetConstraints;
 import org.eclipse.emfcloud.modelserver.emf.common.JsonResponse;
 import org.eclipse.emfcloud.modelserver.emf.common.ValidationMapperModule;
-import org.eclipse.emfcloud.jackson.module.EMFModule;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -52,11 +52,11 @@ public class ValidationFrameworkTest {
 
 	ValidationFramework framework;
 
-	ModelServerClientApi<EObject> mockAPI;
+	ModelServerClientApiV1<EObject> mockAPI;
 
 	@Before
 	public void setup() {
-		mockAPI = Mockito.mock(ModelServerClientApi.class);
+		mockAPI = Mockito.mock(ModelServerClientApiV1.class);
 		Mockito.when(mockAPI.getValidationConstraints("test")).thenReturn(mockConstraintList());
 		Mockito.when(mockAPI.validate("test")).thenReturn(mockValidation());
 		ValidationResultChangeListener changeListener = new ValidationResultChangeListener() {

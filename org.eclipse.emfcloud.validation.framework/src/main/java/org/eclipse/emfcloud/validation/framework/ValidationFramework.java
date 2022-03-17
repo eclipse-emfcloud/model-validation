@@ -20,27 +20,28 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emfcloud.jackson.module.EMFModule;
+import org.eclipse.emfcloud.modelserver.client.ModelServerClientApiV1;
+import org.eclipse.emfcloud.modelserver.client.v1.ModelServerClientV1;
+import org.eclipse.emfcloud.modelserver.emf.common.EMFFacetConstraints;
+import org.eclipse.emfcloud.modelserver.emf.common.ValidationMapperModule;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.apache.log4j.Logger;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emfcloud.modelserver.client.ModelServerClient;
-import org.eclipse.emfcloud.modelserver.client.ModelServerClientApi;
-import org.eclipse.emfcloud.modelserver.emf.common.EMFFacetConstraints;
-import org.eclipse.emfcloud.modelserver.emf.common.ValidationMapperModule;
-import org.eclipse.emfcloud.jackson.module.EMFModule;
-
 public class ValidationFramework {
 
-	private static Logger LOG = Logger.getLogger(ValidationFramework.class);
+	private static Logger LOG = LogManager.getLogger(ValidationFramework.class);
 
 	private String defaultURL = "http://localhost:8081/api/v1/";
 
 	private String modelUri;
 
-	private ModelServerClientApi<EObject> modelServerApi;
+	private ModelServerClientApiV1<EObject> modelServerApi;
 
 	private List<ValidationResult> recentValidationResult = new ArrayList<>();
 
@@ -53,11 +54,11 @@ public class ValidationFramework {
 	public ValidationFramework(String modelUri, ValidationResultChangeListener changeListener)
 			throws MalformedURLException {
 		this.modelUri = modelUri;
-		this.modelServerApi = new ModelServerClient(defaultURL);
+		this.modelServerApi = new ModelServerClientV1(defaultURL);
 		this.changeListener = changeListener;
 	}
 
-	public ValidationFramework(String modelUri, ModelServerClientApi<EObject> modelServerApi,
+	public ValidationFramework(String modelUri, ModelServerClientApiV1<EObject> modelServerApi,
 			ValidationResultChangeListener changeListener) {
 		this.modelUri = modelUri;
 		this.modelServerApi = modelServerApi;

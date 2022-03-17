@@ -5,8 +5,7 @@ Bundle-SymbolicName: org.eclipse.emfcloud.validation.framework
 Bundle-Version: 0.2.0.qualifier
 Export-Package: 
  org.eclipse.emfcloud.validation.framework
-Require-Bundle: org.apache.log4j;bundle-version="1.2.15",
- com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.10.3",
+Require-Bundle: com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.10.3",
  com.fasterxml.jackson.core.jackson-core;bundle-version="2.10.3",
  com.fasterxml.jackson.core.jackson-databind;bundle-version="2.10.3",
  org.eclipse.emfcloud.modelserver.client;bundle-version="0.7.0",
@@ -36,7 +35,8 @@ Import-Package: okhttp3,
  okhttp3.internal.proxy,
  okhttp3.internal.publicsuffix,
  okhttp3.internal.tls,
- okhttp3.internal.ws
+ okhttp3.internal.ws,
+ org.apache.logging.log4j;version="2.17.1"
 Bundle-Vendor: EclipseSource
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.eclipse.emfcloud.validation.framework
