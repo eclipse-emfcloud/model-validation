@@ -12,7 +12,8 @@ package org.eclipse.emfcloud.validation.framework;
 
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.emfcloud.modelserver.client.ModelServerNotification;
 import org.eclipse.emfcloud.modelserver.client.Response;
 import org.eclipse.emfcloud.modelserver.client.SubscriptionListener;
@@ -26,7 +27,7 @@ public class ValidationSubscriptionListener implements SubscriptionListener {
 	private final ValidationFramework framework;
 	private final String modelUri;
 
-	private static Logger LOG = Logger.getLogger(ValidationSubscriptionListener.class);
+	private static Logger LOG = LogManager.getLogger(ValidationSubscriptionListener.class);
 
 	public ValidationSubscriptionListener(final ValidationFramework framework, final String modelUri) {
 		this.framework = framework;

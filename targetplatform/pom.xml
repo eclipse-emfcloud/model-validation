@@ -13,6 +13,6 @@
 		<tycho-version>2.3.0</tycho-version>
 		<tycho-extras-version>2.3.0</tycho-extras-version>
 		<targetPlatform.application.name>org.eclipse.cbi.targetplatform.tpd.converter</targetPlatform.application.name>
-		<targetPlatform.application.args>r2021-09.tpd</targetPlatform.application.args>
+		<targetPlatform.application.args>r2022-03.tpd</targetPlatform.application.args>
 	</properties>
 </project>
