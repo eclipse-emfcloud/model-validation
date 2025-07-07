@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>org.eclipse.emfcloud</groupId>
 			<artifactId>emfjson-jackson</artifactId>
-			<version>1.3.1-SNAPSHOT</version>
+			<version>2.2.0</version>
 		</dependency>
 	</dependencies>
 	<profiles>
@@ -54,14 +54,26 @@
 			<id>p2</id>
 			<activation>
 				<property>
-					<name>!noP2</name> <!-- deactivated if system property noP2 is set, otherwise activated -->
+					<name>!noP2</name> <!-- deactivated if system property noP2 is set, otherwise
+					activated -->
 				</property>
 			</activation>
 			<repositories>
 				<repository>
 					<id>sonatype</id>
 					<name>Sonatype</name>
-					<url>https://oss.sonatype.org/content/groups/public</url>
+					<url>https://central.sonatype.com/</url>
+				</repository>
+				<repository>
+					<name>Central Portal Snapshots</name>
+					<id>central-portal-snapshots</id>
+					<url>https://central.sonatype.com/repository/maven-snapshots/</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
 				</repository>
 			</repositories>
 			<modules>
@@ -75,30 +87,30 @@
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-compiler-plugin</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 						</plugin>
 						<!-- enable tycho build extension -->
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-maven-plugin</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 							<extensions>true</extensions>
 						</plugin>
 						<plugin>
 							<!-- enable source bundle generation -->
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-source-plugin</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 						</plugin>
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>target-platform-configuration</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 						</plugin>
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-versions-plugin</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 						</plugin>
 					</plugins>
 				</pluginManagement>
@@ -185,7 +197,7 @@
 				<repository>
 					<id>sonatype</id>
 					<name>Sonatype</name>
-					<url>https://oss.sonatype.org/content/groups/public</url>
+					<url>https://central.sonatype.com/</url>
 				</repository>
 			</repositories>
 			<modules>
@@ -204,7 +216,7 @@
 				<repository>
 					<id>sonatype</id>
 					<name>Sonatype</name>
-					<url>https://oss.sonatype.org/content/groups/public</url>
+					<url>https://central.sonatype.com/</url>
 				</repository>
 			</repositories>
 			<modules>
@@ -285,22 +297,21 @@
 			</modules>
 			<distributionManagement>
 				<snapshotRepository>
-					<id>ossrh</id>
-					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<id>central</id>
+					<url>https://central.sonatype.com/repository/maven-snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 			<build>
 				<plugins>
 					<!-- To release to Sonatype/Maven central -->
 					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.8</version>
+						<groupId>org.sonatype.central</groupId>
+						<artifactId>central-publishing-maven-plugin</artifactId>
+						<version>0.8.0</version>
 						<extensions>true</extensions>
 						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-							<autoreleaseafterclose>false</autoreleaseafterclose>
+							<publishingServerId>central</publishingServerId>
+							<autoPublish>true</autoPublish>
 						</configuration>
 					</plugin>
 					<!-- To generate javadoc -->

@@ -33,12 +33,12 @@
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-p2-repository-plugin</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 						</plugin>
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-p2-plugin</artifactId>
-							<version>2.3.0</version>
+							<version>3.0.5</version>
 						</plugin>
 					</plugins>
 				</pluginManagement>
