@@ -7,15 +7,15 @@
       <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="1.2.1100.v20220210-1157"/>
       <unit id="org.eclipse.equinox.executable.feature.group" version="3.8.1500.v20220210-1108"/>
       <unit id="org.eclipse.emf.sdk.feature.group" version="2.29.0.v20220226-1304"/>
-      <repository location="http://download.eclipse.org/releases/2022-03/"/>
+      <repository location="http://download.eclipse.org/releases/2022-03/202203161000/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emfcloud.emfjson-jackson" version="0.0.0"/>
-      <repository location="https://download.eclipse.org/emfcloud/emfjson-jackson/p2/releases/2.0.0/"/>
+      <repository location="https://download.eclipse.org/emfcloud/emfjson-jackson/p2/releases/2.2.0/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emfcloud.modelserver.feature.feature.group" version="0.0.0"/>
-      <repository location="https://download.eclipse.org/emfcloud/modelserver/p2/integration/0.8.0.I20220315/"/>
+      <repository location="https://download.eclipse.org/emfcloud/modelserver/p2/staging/0.8.0.RC05/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.mockito" version="0.0.0"/>

@@ -158,9 +158,9 @@
 								-Dsoftware.download.area=${rsync.local.dir}</appArgLine>
 							<repositories>
 								<repository>
-									<id>2022-03</id>
+									<id>2024-03</id>
 									<layout>p2</layout>
-									<url>http://download.eclipse.org/releases/2022-03</url>
+									<url>http://download.eclipse.org/releases/2024-03/</url>
 								</repository>
 							</repositories>
 							<dependencies>
@@ -183,10 +183,6 @@
 								<dependency>
 									<artifactId>org.eclipse.equinox.p2.extras.feature</artifactId>
 									<type>eclipse-feature</type>
-								</dependency>
-								<dependency>
-									<artifactId>org.eclipse.equinox.ds</artifactId>
-									<type>eclipse-plugin</type>
 								</dependency>
 							</dependencies>
 						</configuration>
