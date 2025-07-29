@@ -2,13 +2,14 @@
 <project name="project">
 
     <target name="getMajorMinorVersion">
-        <property name="temp" value="${unqualifiedVersion}" />
-        <replaceregexp property="majorMinorVersion"
-            match="(.*)\.[^.]*$"
-            replace="\1">
-            <string>${temp}</string>
-        </replaceregexp>
+        <loadresource property="majorMinorVersion">
+            <string value="${unqualifiedVersion}" />
+            <filterchain>
+                <replaceregex pattern="(.*)\.[^.]*$" replace="\1" />
+            </filterchain>
+        </loadresource>
     </target>
+
 
     <target name="test_getMajorMinor" depends="getMajorMinorVersion">
         <echo message="majorMinorVersion: ${majorMinorVersion}" />
