@@ -87,30 +87,30 @@
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-compiler-plugin</artifactId>
-							<version>3.0.5</version>
+							<version>4.0.3</version>
 						</plugin>
 						<!-- enable tycho build extension -->
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-maven-plugin</artifactId>
-							<version>3.0.5</version>
+							<version>4.0.3</version>
 							<extensions>true</extensions>
 						</plugin>
 						<plugin>
 							<!-- enable source bundle generation -->
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-source-plugin</artifactId>
-							<version>3.0.5</version>
+							<version>4.0.3</version>
 						</plugin>
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>target-platform-configuration</artifactId>
-							<version>3.0.5</version>
+							<version>4.0.3</version>
 						</plugin>
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-versions-plugin</artifactId>
-							<version>3.0.5</version>
+							<version>4.0.3</version>
 						</plugin>
 					</plugins>
 				</pluginManagement>

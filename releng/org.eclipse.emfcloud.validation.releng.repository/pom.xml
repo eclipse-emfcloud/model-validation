@@ -16,7 +16,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-publisher-plugin</artifactId>
-				<version>3.0.5</version>
+				<version>4.0.3</version>
 				<configuration>
 					<profiles>JavaSE-17</profiles>
 				</configuration>
@@ -45,7 +45,7 @@
 						<plugin>
 							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>target-platform-configuration</artifactId>
-							<version>3.0.5</version>
+							<version>4.0.3</version>
 						</plugin>
 					</plugins>
 				</pluginManagement>
@@ -145,7 +145,7 @@
 					<plugin>
 						<groupId>org.eclipse.tycho.extras</groupId>
 						<artifactId>tycho-eclipserun-plugin</artifactId>
-						<version>3.0.5</version>
+						<version>4.0.3</version>
 						<configuration>
 							<executionEnvironment>JavaSE-17</executionEnvironment>
 							<!-- IMPORTANT: DO NOT split the arg line -->
@@ -178,7 +178,12 @@
 									<artifactId>org.eclipse.equinox.p2.extras.feature</artifactId>
 									<type>eclipse-feature</type>
 								</dependency>
+								<dependency>
+									<artifactId>org.eclipse.equinox.ds</artifactId>
+									<type>eclipse-plugin</type>
+								</dependency>
 							</dependencies>
+							<addDefaultDependencies>true</addDefaultDependencies>
 						</configuration>
 						<executions>
 							<execution>
